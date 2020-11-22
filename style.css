@@ -1,7 +1,42 @@
-.azul {
-  color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 1rem;
 }
 
-table * {
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.azul {
+  color: #0000ff;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  border-spacing: 2px;
+}
+
+table td {
+  padding: 2px;
+  text-align: center;
   border: 1px solid #000000;
+  width: 100px;
+}
+
+table td:first-child {
+  text-align: left;
+}
+
+button {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
