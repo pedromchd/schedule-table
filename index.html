@@ -8,7 +8,6 @@
   <title>Template</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
@@ -51,14 +50,14 @@
       <td>10h</td>
       <td></td>
       <td></td>
-      <td class="button"><button>BOTÃO</button></td>
+      <td class="button"><button onclick="perCent(1,6,4)">Fazer exercícios</button></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>11h</td>
       <td></td>
-      <td class="button" onclick="perCent(2,5)" rowspan="2" ><button>BOTÃO</button></td>
+      <td class="button" rowspan="2"><button onclick="perCent(2,5,3)">Estudar a bolsa</button></td>
       <td></td>
       <td></td>
       <td></td>
@@ -161,13 +160,14 @@
     </tr>
     <tr>
       <td>TOTAL</td>
-      <td></td>
+      <td id="tdSeg"></td>
       <td id="tdTer"></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td id="tdQua"></td>
+      <td id="tdQui"></td>
+      <td id="tdSex"></td>
     </tr>
   </table>
+  <script src="script.js"></script>
 </body>
 
 </html>

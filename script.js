@@ -1,16 +1,12 @@
-function perCent(value, total) {
+function perCent(value, total, dia) {
+  pC = 0;
   pC += value / total * 100;
-  tdTer.innerHTML = `${pC}%`
-  // console.log(pC);
+  document.getElementById(week[dia - 2]).innerHTML = `${Math.round(pC)}%`
 }
 
-let pC = 0;
+let pC;
+let week = ['tdSeg','tdTer','tdQua','tdQui','tdSex'];
 
-// let input = document.getElementById('terca');
-// input.value = 3;
-
-// let b = parseInt(prompt('Informe o valor da sua atividade:'));
-// let v = parseInt(prompt('Informe o somatorio de todas as aitivades:'));
-// console.log(b, v);
-
-// console.log(`${perCent(b, v)}%`);
+// document.getElementsByTagName();
+// document.addEventListener('click', );
+// document.querySelectorAll();
