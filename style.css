@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-/* html {
-  --let: ;
-} */
-
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
-  /* margin: 1rem; */
 }
 
 div {
@@ -21,8 +15,8 @@ div {
 }
 
 h1 {
-  /* font-family: 'Roboto', sans-serif; */
   font-size: 2rem;
+  font-weight: 500;
   margin: 1rem 0;
 }
 
@@ -34,9 +28,9 @@ table {
 
 table td {
   vertical-align: middle;
+  text-align: center;
   min-width: 100px;
   height: 50px;
-  text-align: center;
   border: 1px solid #000000;
 }
 
@@ -48,7 +42,6 @@ table td:first-child {
 table tr:nth-child(2) td {
   color: #ffffff;
   background-color: #686975;
-  text-align: center;
 }
 
 table tr:nth-child(2) td:first-child {
@@ -58,9 +51,10 @@ table tr:nth-child(2) td:first-child {
 button {
   display: block;
   padding: 0.5rem 1rem;
+  border: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  background-color: #62539b;
+  font-family: 'Poppins', sans-serif;
   color: #ffffff;
+  background-color: #62539b;
 }
