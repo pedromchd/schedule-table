@@ -1,8 +1,7 @@
 function buttonOnClick(button, value, dia) {
   button.onclick = function perCent() {
-    pC = 0;
     pC += value;
-    document.getElementById(week[dia]).innerHTML = `${Math.round(pC)}%`
+    document.getElementById(week[dia]).innerHTML = `${pC}%`;
   };
 }
 function getNthButton () {
@@ -13,7 +12,7 @@ function getNthButton () {
   return buttonList;
 }
 
-let pC;
+let pC = 0;
 let week = ['tdSeg','tdTer','tdQua','tdQui','tdSex'];
 let buttonList = getNthButton();
 
