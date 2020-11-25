@@ -10,6 +10,7 @@ body {
   line-height: 1.5rem;
   background: url('pexels-tirachard-kumtanom-733852\ \(Medium\).jpg') fixed;
   background-size: cover;
+  background-position: top center;
 }
 
 div {
