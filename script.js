@@ -60,7 +60,3 @@ for (let i = 3; i <= 20; i++) {
     document.querySelector(`tr:nth-child(${i})`).style.backgroundColor = "#e9e7f1";
   }
 }
-
-// document.getElementsByTagName();
-// document.addEventListener('click', );
-// document.querySelectorAll();
