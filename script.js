@@ -1,22 +1,22 @@
-// function innerHTML(button) {
-//   switch (button) {
-//     case 'Estudar':
-//       return value = 30;
-//     case 'Academia':
-//       return value = 20;
-//     case 'Acordar':
-//     case 'Tomar Café':
-//     case 'Meditar':
-//     case 'Dormir':
-//       return value = 10;
-//     case 'Almoçar':
-//     case 'Jantar':
-//       return value = 5;
-//   }
-// }
+function innerHTML(button) {
+  switch (button) {
+    case 'Estudar':
+      return value = 30;
+    case 'Academia':
+      return value = 20;
+    case 'Acordar':
+    case 'Tomar Café':
+    case 'Meditar':
+    case 'Dormir':
+      return value = 10;
+    case 'Almoçar':
+    case 'Jantar':
+      return value = 5;
+  }
+}
 function buttonOnClick(button, dia) {
-  // innerHTML(button.innerHTML);
   button.onclick = function perCent() {
+    innerHTML(button.innerHTML);
     if (week[dia] !== weekLog) {
       pC = 0;
       weekLog = week[dia];
