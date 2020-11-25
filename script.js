@@ -3,6 +3,7 @@ function innerHTML(button) {
     case 'Estudar':
       return value = 30;
     case 'Academia':
+    case 'Natação':
       return value = 20;
     case 'Acordar':
     case 'Tomar Café':
@@ -18,7 +19,9 @@ function buttonOnClick(button, dia) {
   button.onclick = function perCent() {
     innerHTML(button.innerHTML);
     if (week[dia] !== weekLog) {
-      pC = 0;
+      pC = document.getElementById(week[dia]).innerHTML.split('');
+      pC.pop();
+      pC = parseInt(pC.join(''));
       weekLog = week[dia];
     }
     pC += value;
