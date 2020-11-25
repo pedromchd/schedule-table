@@ -64,3 +64,17 @@ for (let i = 3; i <= 20; i++) {
 // document.getElementsByTagName();
 // document.addEventListener('click', );
 // document.querySelectorAll();
+
+$(".capture").click(function () {
+
+  var buttnName = $(this).attr('name');
+  $.ajax({
+    type: "POST",
+    data: "ClickedButton=" + buttonName,
+    url: "server.php",
+    success: function (data) {
+
+      alert('Written in Log File');
+    }
+  });
+});
