@@ -6,6 +6,8 @@ function buttonOnClick(button, value, dia) {
     }
     pC += value;
     document.getElementById(week[dia]).innerHTML = `${pC}%`;
+    button.style.backgroundColor = 'hsl(252, 30%, 67%)';
+    button.disabled = true;
   };
 }
 function getNthButton () {
