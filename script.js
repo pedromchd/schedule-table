@@ -1,4 +1,21 @@
-function buttonOnClick(button, value, dia) {
+// function innerHTML(button) {
+//   switch (button) {
+//     case 'Estudar':
+//       return value = 30;
+//     case 'Academia':
+//       return value = 20;
+//     case 'Acordar':
+//     case 'Tomar Café':
+//     case 'Meditar':
+//     case 'Dormir':
+//       return value = 10;
+//     case 'Almoçar':
+//     case 'Jantar':
+//       return value = 5;
+//   }
+// }
+function buttonOnClick(button, dia) {
+  // innerHTML(button.innerHTML);
   button.onclick = function perCent() {
     if (week[dia] !== weekLog) {
       pC = 0;
@@ -18,14 +35,15 @@ function getNthButton () {
   return buttonList;
 }
 
-let pC;
-let weekLog;
+let pC = 0;
+let value = 0;
+let weekLog = '';
 let week = ['tdSeg','tdTer','tdQua','tdQui','tdSex'];
 let buttonList = getNthButton();
 
 for (let i = 0; i < buttonList.length; i++) {
   for (let j = 0; j < buttonList[i].length; j++) {
-    buttonOnClick(buttonList[i][j], 35, i);
+    buttonOnClick(buttonList[i][j], i);
   }
 }
 for (let i = 3; i <= 20; i++) {
