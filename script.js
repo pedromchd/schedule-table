@@ -67,7 +67,7 @@ for (let i = 3; i <= 20; i++) {
 
 $(".capture").click(function () {
 
-  var buttnName = $(this).attr('name');
+  var buttonName = $(this).attr('name');
   $.ajax({
     type: "POST",
     data: "ClickedButton=" + buttonName,
