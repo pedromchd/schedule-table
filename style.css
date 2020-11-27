@@ -1,70 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-* {
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
+html, body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
-  background: url('pexels-tirachard-kumtanom-733852\ \(Medium\).jpg') fixed;
+  background: fixed url(pexels-tirachard-kumtanom-733852\ \(Medium\).jpg);
   background-size: cover;
   background-position: top center;
-}
-
-div {
-  margin: auto;
-  width: fit-content;
+  --border-color: #000;
+  --color-cultured: #F1EFED;
+  --color-magnolia: #E9E7F1;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 500;
   margin: 1rem 0;
-  text-shadow: #ffffff 2px 2px 3px;
+  text-shadow: 2px 2px 2px #fff;
 }
 
+div.table {
+  width: fit-content;
+  margin: auto;
+}
+
+/* div.history */
+
 table {
-  display: table;
+  /* display: table; */
+  box-sizing: border-box;
   border-collapse: separate;
   border-spacing: 2px;
 }
 
-table th {
-  background-color: hsla(0, 0%, 60%, 40%);
-  border: 1px #000000 solid;
-  border-radius: 30px 30px 0 0;
-}
-
 table td {
+  border: 1px solid var(--border-color);
   vertical-align: middle;
   text-align: center;
   min-width: 100px;
   height: 50px;
-  border: 1px solid #000000;
+  padding: 5px;
 }
 
-table td:first-child {
-  text-align: left;
-  padding: 15px;
+thead th {
+  background-color: hsla(235, 6%, 43%, 25%);
+  border: 1px solid var(--border-color);
+  border-radius: 30px 30px 0 0;
 }
 
-table tr:nth-child(2) td {
-  color: #ffffff;
+thead td {
+  color: #fff;
   background-color: #686975;
 }
 
-table tr:nth-child(2) td:first-child {
-  background-color: #000000;
+thead td:first-child {
+  color: #fff;
+  background-color: #000;
 }
 
-button {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  background-color: #62539b;
+tbody tr:nth-child(even), tfoot tr {
+  background-color: var(--color-cultured);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-magnolia);
+}
+
+tbody td:first-child {
+  text-align: left;
+  padding-left: 15px;
+}
+
+tbody .tbutton {
+  color: #fff;
+  background-color: #62539B;
+}
+
+tbody .color {
+  background-color: #7B549C;
+}
+
+tbody .bactive {
+  filter: contrast(60%) brightness(120%);
 }

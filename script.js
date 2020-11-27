@@ -1,5 +1,19 @@
-function innerHTML(button) {
-  switch (button) {
+function weekID() {
+  let dayID = [];
+  let temp = document.querySelector('tfoot tr').children;
+  for (let i = 0; i < temp.length; i++) {
+    dayID.push(temp[i].id);
+  }
+  day = dayID[day];
+  if (day !== weekLog) {
+    pC = document.getElementById(day).innerHTML.split('');
+    pC.pop();
+    pC = parseInt(pC.join(''));
+  }
+  return day;
+}
+function innerHTML(tbutton) {
+  switch (tbutton.innerHTML) {
     case 'Estudar':
       return value = 30;
     case 'Academia':
@@ -15,48 +29,27 @@ function innerHTML(button) {
       return value = 5;
   }
 }
-function buttonOnClick(button, dia) {
-  button.onclick = function perCent() {
-    innerHTML(button.innerHTML);
-    if (week[dia] !== weekLog) {
-      pC = document.getElementById(week[dia]).innerHTML.split('');
-      pC.pop();
-      pC = parseInt(pC.join(''));
-      weekLog = week[dia];
-    }
-    pC += value;
-    document.getElementById(week[dia]).innerHTML = `${pC}%`;
-    button.style.filter = 'contrast(60%) brightness(120%)';
-    button.disabled = true;
-  };
-}
-function getNthButton () {
-  let buttonList = [];
-  for (let i = 2; i <= 6; i++) {
-    buttonList.push(document.querySelectorAll(`td:nth-child(${i}) button`));
+
+let tbutton = document.querySelectorAll('tbody td:not(:first-child):not(:empty)');
+for (let i = 0; i < tbutton.length; i++) {
+  tbutton[i].classList.add('tbutton');
+  if (tbutton[i].cellIndex % 2 === 0) {
+    tbutton[i].classList.add('color');
   }
-  return buttonList;
 }
 
 let pC = 0;
 let value = 0;
 let weekLog = '';
-let week = ['tdSeg','tdTer','tdQua','tdQui','tdSex'];
-let buttonList = getNthButton();
-
-for (let i = 0; i < buttonList.length; i++) {
-  for (let j = 0; j < buttonList[i].length; j++) {
-    buttonOnClick(buttonList[i][j], i);
+let table = document.querySelector('table');
+table.addEventListener('click', function(e) {
+  let eTarget = e.target;
+  if (eTarget.nodeName === 'TD' && eTarget.classList.contains('tbutton') && !eTarget.classList.contains('bactive')) {
+    eTarget.classList.toggle('bactive');
+    day = eTarget.cellIndex;
+    weekID();
+    innerHTML(eTarget);
+    pC += value;
+    document.getElementById(`${day}`).innerHTML = `${pC}%`;
   }
-}
-for (let i = 3; i <= 20; i++) {
-  if (i%2 == 0) {
-    document.querySelector(`tr:nth-child(${i})`).style.backgroundColor = "#f1efed";
-  } else {
-    let verticalButton = document.querySelectorAll(`td:nth-child(${i}) button`);
-    for (let j = 0; j < verticalButton.length; j++) {
-      verticalButton[j].style.backgroundColor = '#87549C';
-    }
-    document.querySelector(`tr:nth-child(${i})`).style.backgroundColor = "#e9e7f1";
-  }
-}
+});

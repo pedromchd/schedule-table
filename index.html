@@ -12,165 +12,202 @@
 </head>
 
 <body>
-  <div>
+  <div class="table">
     <table>
-      <tr>
-        <th colspan="6"><h1>Cronograma</h1></th>
-      </tr>
-      <tr>
-        <td>HORÁRIOS</td>
-        <td>SEGUNDA</td>
-        <td>TERÇA</td>
-        <td>QUARTA</td>
-        <td>QUINTA</td>
-        <td>SEXTA</td>
-      </tr>
-      <tr>
-        <td>07h</td>
-        <td><button>Acordar</button></td>
-        <td><button>Acordar</button></td>
-        <td><button>Acordar</button></td>
-        <td><button>Acordar</button></td>
-        <td><button>Acordar</button></td>
-      </tr>
-      <tr>
-        <td>08h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>09h</td>
-        <td><button>Academia</button></td>
-        <td><button>Natação</button></td>
-        <td><button>Academia</button></td>
-        <td><button>Natação</button></td>
-        <td><button>Academia</button></td>
-      </tr>
-      <tr>
-        <td>10h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>11h</td>
-        <td rowspan="2"><button>Estudar</button></td>
-        <td rowspan="2"><button>Estudar</button></td>
-        <td rowspan="2"><button>Estudar</button></td>
-        <td rowspan="2"><button>Estudar</button></td>
-        <td rowspan="2"><button>Estudar</button></td>
-      </tr>
-      <tr>
-        <td>12h</td>
-        <!-- <td></td> -->
-        <!-- <td>/td> -->
-        <!-- <td></td> -->
-        <!-- <td></td> -->
-        <!-- <td></td> -->
-      </tr>
-      <tr>
-        <td>13h</td>
-        <td><button>Almoçar</button></td>
-        <td><button>Almoçar</button></td>
-        <td><button>Almoçar</button></td>
-        <td><button>Almoçar</button></td>
-        <td><button>Almoçar</button></td>
-      </tr>
-      <tr>
-        <td>14h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>15h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>16h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>17h</td>
-        <td><button>Tomar Café</button></td>
-        <td><button>Tomar Café</button></td>
-        <td><button>Tomar Café</button></td>
-        <td><button>Tomar Café</button></td>
-        <td><button>Tomar Café</button></td>
-      </tr>
-      <tr>
-        <td>18h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>19h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>20h</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>21h</td>
-        <td><button>Jantar</button></td>
-        <td><button>Jantar</button></td>
-        <td><button>Jantar</button></td>
-        <td><button>Jantar</button></td>
-        <td><button>Jantar</button></td>
-      </tr>
-      <tr>
-        <td>22h</td>
-        <td><button>Meditar</button></td>
-        <td><button>Meditar</button></td>
-        <td><button>Meditar</button></td>
-        <td><button>Meditar</button></td>
-        <td><button>Meditar</button></td>
-      </tr>
-      <tr>
-        <td>23h</td>
-        <td><button>Dormir</button></td>
-        <td><button>Dormir</button></td>
-        <td><button>Dormir</button></td>
-        <td><button>Dormir</button></td>
-        <td><button>Dormir</button></td>
-      </tr>
-      <tr>
-        <td>TOTAL</td>
-        <td id="tdSeg">0%</td>
-        <td id="tdTer">0%</td>
-        <td id="tdQua">0%</td>
-        <td id="tdQui">0%</td>
-        <td id="tdSex">0%</td>
-      </tr>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th colspan="6"><h1>Cronograma</h1></th>
+        </tr>
+        <tr>
+          <td>HORÁRIOS</td>
+          <td>SEGUNDA</td>
+          <td>TERÇA</td>
+          <td>QUARTA</td>
+          <td>QUINTA</td>
+          <td>SEXTA</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>06h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Academia</td>
+        </tr>
+        <tr>
+          <td>07h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td rowspan="2">Estudar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>08h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- <td></td> -->
+          <td></td>
+        </tr>
+        <tr>
+          <td>09h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>TOTAL</td>
+          <td id="SEG">0%</td>
+          <td id="TER">0%</td>
+          <td id="QUA">0%</td>
+          <td id="QUI">0%</td>
+          <td id="SEX">0%</td>
+        </tr>
+      </tfoot>
     </table>
   </div>
+  <!-- <div class="history">
+    <form>
+      <input type="text">
+      <button>ENVIAR</button>
+    </form>
+  </div> -->
   <script src="script.js"></script>
 </body>
 
