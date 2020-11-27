@@ -2,18 +2,16 @@
 html, body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  line-height: 1.5rem;
-  background: fixed url(pexels-tirachard-kumtanom-733852\ \(Medium\).jpg);
-  background-size: cover;
-  background-position: top center;
+  line-height: 1rem;
+  background: url('pexels-tirachard-kumtanom-733852\ \(Medium\).jpg') center top / cover fixed;
   --border-color: #000;
   --color-cultured: #F1EFED;
   --color-magnolia: #E9E7F1;
 }
 
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 h1 {
   font-size: 2rem;
@@ -30,7 +28,6 @@ div.table {
 /* div.history */
 
 table {
-  box-sizing: border-box;
   border-collapse: separate;
   border-spacing: 2px;
 }
@@ -41,7 +38,7 @@ table td {
   text-align: center;
   min-width: 100px;
   height: 50px;
-  padding: 5px;
+  padding: 20px 15px;
 }
 
 thead th {
