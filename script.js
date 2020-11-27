@@ -5,8 +5,8 @@ function innerHTML(tbutton) {
     case 'Academia':
     case 'Natação':
       return value = 20;
-    case 'Acordar':
-    case 'Tomar Café':
+    case 'Arrumar a Casa': case 'Arrumar<br>a Casa':
+    case 'Tomar Café': case 'Tomar<br>Café':
     case 'Meditar':
     case 'Dormir':
       return value = 10;
