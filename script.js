@@ -1,17 +1,3 @@
-function weekID() {
-  let dayID = [];
-  let temp = document.querySelector('tfoot tr').children;
-  for (let i = 0; i < temp.length; i++) {
-    dayID.push(temp[i].id);
-  }
-  day = dayID[day];
-  if (day !== weekLog) {
-    pC = document.getElementById(day).innerHTML.split('');
-    pC.pop();
-    pC = parseInt(pC.join(''));
-  }
-  return day;
-}
 function innerHTML(tbutton) {
   switch (tbutton.innerHTML) {
     case 'Estudar':
@@ -40,16 +26,19 @@ for (let i = 0; i < tbutton.length; i++) {
 
 let pC = 0;
 let value = 0;
-let weekLog = '';
+let weekLog = 0;
 let table = document.querySelector('table');
 table.addEventListener('click', function(e) {
-  let eTarget = e.target;
-  if (eTarget.nodeName === 'TD' && eTarget.classList.contains('tbutton') && !eTarget.classList.contains('bactive')) {
-    eTarget.classList.toggle('bactive');
-    day = eTarget.cellIndex;
-    weekID();
-    innerHTML(eTarget);
+  if (e.target.nodeName === 'TD' && e.target.classList.contains('tbutton') && !e.target.classList.contains('bactive')) {
+    e.target.classList.toggle('bactive');
+    let day = e.target.cellIndex;
+    let dayWeek = document.querySelector(`tfoot td:nth-child(${day + 1})`);
+    if (day !== weekLog) {
+      weekLog = day;
+      pC = parseFloat(dayWeek.innerHTML);
+    }
+    innerHTML(e.target);
     pC += value;
-    document.getElementById(`${day}`).innerHTML = `${pC}%`;
+    dayWeek.innerHTML = `${pC}%`;
   }
 });

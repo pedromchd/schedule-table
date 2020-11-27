@@ -11,6 +11,10 @@ html, body {
   --color-magnolia: #E9E7F1;
 }
 
+/* * {
+  box-sizing: border-box;
+} */
+
 h1 {
   font-size: 2rem;
   font-weight: 500;
@@ -26,7 +30,6 @@ div.table {
 /* div.history */
 
 table {
-  /* display: table; */
   box-sizing: border-box;
   border-collapse: separate;
   border-spacing: 2px;
