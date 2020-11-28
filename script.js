@@ -44,17 +44,24 @@ table.addEventListener('click', function(e) {
   }
 });
 
-let button = document.querySelector('button');
-button.addEventListener('click', function() {
-  let printText = '';
-  let date = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
-  for (let i = 1; i < total.length; i++) {
-    printText += `(${total[i].id}: ${total[i].innerHTML}) `;
+document.querySelector('p#log').innerHTML = localStorage['history'].replaceAll('*', '<br>');
+let history = document.querySelector('div#history');
+history.addEventListener('click', function(e) {
+  let log = '<i>Nada por enquanto...</i>';
+  if (e.target.nodeName === 'BUTTON') {
+    if (e.target.classList.contains('save')) {
+      let printText = '';
+      for (let i = 1; i < total.length; i++) {
+        printText += `${total[i].id}: ${total[i].innerHTML} / `;
+      }
+      let date = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
+      localStorage['history'] = localStorage['history'].replace(log, '');
+      log = `${date} - ${printText}` + '*';
+      localStorage['history'] += log;
+    } else if (e.target.classList.contains('clear') && confirm('Deseja deletar o histórico?') === true) {
+      localStorage.clear();
+      localStorage['history'] = log;
+    }
+    document.querySelector('p#log').innerHTML = localStorage['history'].replaceAll('*', '<br>');
   }
-  let newP = document.createElement('p');
-  newP.classList.add('log');
-  newP.innerHTML = `<i>${date}</i> - ${printText}`;
-  let history = document.querySelector('div#history');
-  history.appendChild(newP);
-  // localStorage['history'] += newP.innerHTML;
 });
