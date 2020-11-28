@@ -28,11 +28,12 @@ let pC = 0;
 let value = 0;
 let weekLog = 0;
 let table = document.querySelector('table');
+let total = document.querySelectorAll('tfoot td');
 table.addEventListener('click', function(e) {
   if (e.target.nodeName === 'TD' && e.target.classList.contains('tbutton') && !e.target.classList.contains('bactive')) {
     e.target.classList.toggle('bactive');
     let day = e.target.cellIndex;
-    let dayWeek = document.querySelector(`tfoot td:nth-child(${day + 1})`);
+    let dayWeek = total[day];
     if (day !== weekLog) {
       weekLog = day;
       pC = parseFloat(dayWeek.innerHTML);
@@ -41,4 +42,17 @@ table.addEventListener('click', function(e) {
     pC += value;
     dayWeek.innerHTML = `${pC}%`;
   }
+});
+
+let button = document.querySelector('button');
+button.addEventListener('click', function() {
+  let printText = '';
+  for (let i = 1; i < total.length; i++) {
+    printText += `${total[i].id}: ${total[i].innerHTML} `;
+  }
+  let newP = document.createElement('p');
+  let newText = document.createTextNode(`${printText}`);
+  newP.appendChild(newText);
+  let history = document.querySelector('div#history');
+  history.appendChild(newP);
 });

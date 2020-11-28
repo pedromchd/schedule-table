@@ -20,12 +20,10 @@ h1 {
   text-shadow: 2px 2px 2px #fff;
 }
 
-div.table {
+#table, #history {
   width: fit-content;
   margin: auto;
 }
-
-/* div.history */
 
 table {
   border-collapse: separate;
@@ -82,4 +80,21 @@ tbody .color {
 
 tbody .bactive {
   filter: contrast(60%) brightness(120%);
+}
+
+#history {
+  margin: 20px 0 20px 0;
+  padding: 15px;
+  border: 1px solid black;
+  width: 100%;
+  text-align: left;
+  background-color: var(--color-magnolia);
+}
+
+#history button {
+  border: 1px solid #000;
+  padding: 5px;
+  color: #fff;
+  background-color: #62539B;
+  display: block;
 }
