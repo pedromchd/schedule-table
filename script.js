@@ -15,6 +15,15 @@ function innerHTML(tbutton) {
       return value = 5;
   }
 }
+function resetTotal() {
+  let bactive = document.querySelectorAll('table .bactive');
+  for (let i = 0; i < bactive.length; i++) {
+    bactive[i].classList.remove('bactive');
+  }
+  for (let j = 1; j < total.length; j++) {
+    total[j].innerHTML = '0%';
+  }
+}
 
 let tbutton = document.querySelectorAll('tbody td:not(:first-child):not(:empty)');
 for (let i = 0; i < tbutton.length; i++) {
@@ -58,6 +67,7 @@ history.addEventListener('click', function(e) {
       localStorage['history'] = localStorage['history'].replace(log, '');
       log = `${date} - ${printText}` + '*';
       localStorage['history'] += log;
+      resetTotal();
     } else if (e.target.classList.contains('clear') && confirm('Deseja deletar o histórico?') === true) {
       localStorage.clear();
       localStorage['history'] = log;
