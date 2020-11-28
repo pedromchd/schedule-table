@@ -47,12 +47,13 @@ table.addEventListener('click', function(e) {
 let button = document.querySelector('button');
 button.addEventListener('click', function() {
   let printText = '';
+  let date = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
   for (let i = 1; i < total.length; i++) {
-    printText += `${total[i].id}: ${total[i].innerHTML} `;
+    printText += `(${total[i].id}: ${total[i].innerHTML}) `;
   }
   let newP = document.createElement('p');
-  let newText = document.createTextNode(`${printText}`);
-  newP.appendChild(newText);
+  newP.classList.add('log');
+  newP.innerHTML = `<i>${date}</i> - ${printText}`;
   let history = document.querySelector('div#history');
   history.appendChild(newP);
 });

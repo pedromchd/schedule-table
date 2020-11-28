@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
 html, body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -80,6 +80,14 @@ tbody .color {
 
 tbody .bactive {
   filter: contrast(60%) brightness(120%);
+}
+
+b {
+  font-weight: 500;
+}
+
+i {
+  font-style: italic;
 }
 
 #history {
