@@ -53,6 +53,9 @@ table.addEventListener('click', function(e) {
   }
 });
 
+if (localStorage['history'] === undefined) {
+  localStorage['history'] = '<i>Nada por enquanto...</i>';
+}
 document.querySelector('p#log').innerHTML = localStorage['history'].replaceAll('*', '<br>');
 let history = document.querySelector('div#history');
 history.addEventListener('click', function(e) {
