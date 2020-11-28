@@ -56,4 +56,5 @@ button.addEventListener('click', function() {
   newP.innerHTML = `<i>${date}</i> - ${printText}`;
   let history = document.querySelector('div#history');
   history.appendChild(newP);
+  // localStorage['history'] += newP.innerHTML;
 });
