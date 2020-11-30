@@ -50,20 +50,20 @@ thead td {
   background-color: #686975;
 }
 
-thead td:first-child {
+thead td:first-of-type {
   color: #fff;
   background-color: #000;
 }
 
-tbody tr:nth-child(even), tfoot tr {
+tbody tr:nth-of-type(even), tfoot tr {
   background-color: var(--color-cultured);
 }
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-of-type(odd) {
   background-color: var(--color-magnolia);
 }
 
-tbody td:first-child {
+tbody td:first-of-type {
   text-align: left;
   padding-left: 15px;
 }

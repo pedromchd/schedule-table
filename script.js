@@ -25,7 +25,7 @@ function resetTotal() {
   }
 }
 
-let tbutton = document.querySelectorAll('tbody td:not(:first-child):not(:empty)');
+let tbutton = document.querySelectorAll('tbody td:not(:first-of-type):not(:empty)');
 for (let i = 0; i < tbutton.length; i++) {
   tbutton[i].classList.add('tbutton');
   if (tbutton[i].cellIndex % 2 === 0) {
