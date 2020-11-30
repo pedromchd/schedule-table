@@ -15,7 +15,7 @@ function innerHTML(tbutton) {
       return value = 5;
   }
 }
-function resetTotal() {
+function resetTable() {
   value = 0;
   weekLog = 0;
   let bactive = document.querySelectorAll('table .bactive');
@@ -72,10 +72,12 @@ history.addEventListener('click', function(e) {
       localStorage['history'] = localStorage['history'].replace(log, '');
       log = `${date} - ${printText}` + '*';
       localStorage['history'] += log;
-      resetTotal();
-    } else if (e.target.classList.contains('clear') && confirm('Deseja deletar o histórico?') === true) {
+      resetTable();
+    } else if (e.target.classList.contains('delete') && confirm('Deseja deletar o histórico?') === true) {
       localStorage.clear();
       localStorage['history'] = log;
+    } else if (e.target.classList.contains('clear') && confirm('Deseja limpar a tabela?') === true) {
+      resetTable();
     }
     document.querySelector('p#log').innerHTML = localStorage['history'].replaceAll('*', '<br>');
   }
