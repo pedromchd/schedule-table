@@ -16,6 +16,8 @@ function innerHTML(tbutton) {
   }
 }
 function resetTotal() {
+  value = 0;
+  weekLog = 0;
   let bactive = document.querySelectorAll('table .bactive');
   for (let i = 0; i < bactive.length; i++) {
     bactive[i].classList.remove('bactive');
