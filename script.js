@@ -66,9 +66,15 @@ history.addEventListener('click', function(e) {
     if (e.target.classList.contains('save')) {
       let printText = '';
       for (let i = 1; i < total.length; i++) {
-        printText += `${total[i].id}: ${total[i].innerHTML} / `;
+        if (total[i].innerHTML === '0%') {
+          continue;
+        }
+        printText += ` ${total[i].id}: ${total[i].innerHTML} /`;
       }
-      let date = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
+      printText = printText.split('')
+      printText.pop();
+      printText = printText.join('');
+      let date = new Date().toJSON().slice(5, 10).replace(/-/g, '.');
       localStorage['history'] = localStorage['history'].replace(log, '');
       log = `${date} - ${printText}` + '*';
       localStorage['history'] += log;
@@ -76,6 +82,7 @@ history.addEventListener('click', function(e) {
     } else if (e.target.classList.contains('delete') && confirm('Deseja deletar o histórico?') === true) {
       localStorage.clear();
       localStorage['history'] = log;
+      resetTable();
     } else if (e.target.classList.contains('clear') && confirm('Deseja limpar a tabela?') === true) {
       resetTable();
     }
