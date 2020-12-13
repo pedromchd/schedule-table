@@ -1,3 +1,3 @@
-# schedule-table
+# Schedule Table
 
-Disponível em: <https://pedromchd.github.io/schedule-table/>
+Um cronograma desenvolvido para o gerenciamento das atividades durante a semana.
